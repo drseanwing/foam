@@ -26,23 +26,42 @@ fi
 # Check if .env file exists
 if [ ! -f ".env" ]; then
     echo -e "${YELLOW}Warning: No .env file found${NC}"
-    echo "Creating .env from template..."
-    cat > .env << 'EOF'
+    echo "Creating .env from template with randomly generated passwords..."
+
+    # Generate random passwords
+    N8N_PASS=$(openssl rand -base64 32 | tr -d "=+/" | cut -c1-32)
+    POSTGRES_PASS=$(openssl rand -base64 32 | tr -d "=+/" | cut -c1-32)
+    GRAFANA_PASS=$(openssl rand -base64 32 | tr -d "=+/" | cut -c1-32)
+
+    cat > .env << EOF
 # N8N Configuration
 N8N_USER=admin
-N8N_PASSWORD=change_this_password
+N8N_PASSWORD=${N8N_PASS}
 N8N_HOST=localhost
 POSTGRES_USER=n8n
-POSTGRES_PASSWORD=change_this_password
+POSTGRES_PASSWORD=${POSTGRES_PASS}
 
 # Monitoring Configuration
 GRAFANA_ADMIN_USER=admin
-GRAFANA_ADMIN_PASSWORD=change_this_secure_password
+GRAFANA_ADMIN_PASSWORD=${GRAFANA_PASS}
 DOMAIN=localhost
 
 EOF
-    echo -e "${YELLOW}Please edit .env file and update passwords!${NC}"
-    read -p "Press Enter to continue after editing .env file..."
+    echo -e "${GREEN}✓ Created .env file with randomly generated secure passwords${NC}"
+    echo -e "${RED}┌────────────────────────────────────────────────────────────┐${NC}"
+    echo -e "${RED}│ IMPORTANT SECURITY NOTICE:                                 │${NC}"
+    echo -e "${RED}│ Random passwords have been generated and saved to .env     │${NC}"
+    echo -e "${RED}│ Please save these credentials securely!                    │${NC}"
+    echo -e "${RED}│                                                            │${NC}"
+    echo -e "${RED}│ View passwords: cat .env                                   │${NC}"
+    echo -e "${RED}│                                                            │${NC}"
+    echo -e "${RED}│ You should:                                                │${NC}"
+    echo -e "${RED}│ 1. Immediately backup the .env file securely              │${NC}"
+    echo -e "${RED}│ 2. Restrict .env file permissions: chmod 600 .env         │${NC}"
+    echo -e "${RED}│ 3. Never commit .env to version control                   │${NC}"
+    echo -e "${RED}└────────────────────────────────────────────────────────────┘${NC}"
+    echo ""
+    read -p "Press Enter to continue after saving your credentials..."
 fi
 
 # Load environment variables

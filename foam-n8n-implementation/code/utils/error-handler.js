@@ -82,7 +82,9 @@ const CONFIG = {
  * @returns {Object} Classification with type, retryable flag, and suggested action
  */
 function classifyError(error) {
-  const message = error.message || error.toString() || '';
+  const message = (error && typeof error.message === 'string')
+    ? error.message
+    : (error ? String(error) : '');
   const statusCode = error.statusCode || error.status || error.code;
   
   // Rate limiting
@@ -281,7 +283,7 @@ function formatError(error, context = {}) {
  * @returns {string} Error ID
  */
 function generateErrorId() {
-  return 'err_' + Date.now().toString(36) + Math.random().toString(36).substr(2, 9);
+  return 'err_' + Date.now().toString(36) + Math.random().toString(36).substring(2, 11);
 }
 
 // =============================================================================

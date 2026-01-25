@@ -37,7 +37,7 @@
     {
       "parameters": {
         "baseUrl": "http://host.docker.internal:11434",
-        "model": "llama3.2",
+        "model": "llama3.2:latest",
         "options": {
           "temperature": 0.2
         }
@@ -75,7 +75,7 @@
     {
       "parameters": {
         "baseUrl": "http://host.docker.internal:11434",
-        "model": "mistral",
+        "model": "mistral:latest",
         "options": {
           "temperature": 0.3
         }
@@ -157,7 +157,7 @@
     {
       "parameters": {
         "baseUrl": "http://host.docker.internal:11434",
-        "model": "llama3.2",
+        "model": "llama3.2:latest",
         "options": {
           "temperature": 0.3
         }

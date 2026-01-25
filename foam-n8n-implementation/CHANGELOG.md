@@ -5,6 +5,47 @@ All notable changes to the FOAM N8N Implementation will be documented in this fi
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2025-01-25
+
+### Added
+- **GitHub Actions CI Workflow** (`.github/workflows/ci.yml`):
+  - Validates all JSON files (workflows, schemas)
+  - Validates JSON schemas against draft-07
+  - Lints shell scripts with shellcheck
+  - Validates Docker Compose configurations
+  - Checks environment variable consistency
+  - Validates N8N workflow structure and connections
+
+- **Test Suite** (`tests/`):
+  - `validate-workflows.js` - N8N workflow structure validation
+  - `validate-schemas.js` - JSON schema validation with Ajv
+  - `check-model-consistency.js` - LLM model reference validation
+  - `run-all-tests.js` - Unified test runner
+  - `package.json` - Test dependencies (ajv, ajv-formats)
+
+### Fixed
+- **CRITICAL: hitl-review.json** - Fixed invalid credential template syntax
+- **CRITICAL: hitl-review.json** - Fixed wrong parameter name (modelId → model)
+- **CRITICAL: docker-compose.monitoring.yml** - Removed default Grafana password
+- **CRITICAL: setup-monitoring.sh** - Now generates random secure passwords
+- **HIGH: Ollama model IDs** - Standardized to `llama3.2:latest` and `mistral:latest` across all workflows
+- **HIGH: error-handler.js** - Replaced deprecated `substr()` with `substring()`
+- **HIGH: error-handler.js** - Added defensive error.message handling
+
+### Changed
+- **docs/deployment.md** - Updated status from "Stub" to "Complete (v1.0.0)"
+- **docs/troubleshooting.md** - Updated status to reflect actual completion
+- **TODO.md** - Added note about v1.1 planned features
+- **IMPLEMENTATION_FRAMEWORK.md** - Added clarification note about spec vs implementation
+- **.env.monitoring.example** - Enhanced security documentation
+
+### Security
+- Grafana now requires explicit password configuration (no default)
+- Monitoring setup generates random 32-character passwords
+- Added security notes to environment templates
+
+---
+
 ## [1.0.0] - 2025-01-25
 
 ### Added
@@ -316,6 +357,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 | Version | Date | Summary |
 |---------|------|---------|
+| 1.0.1 | 2025-01-25 | Code review fixes, GitHub CI, test suite |
 | 1.0.0 | 2025-01-25 | Iteration 10 complete - Production deployment (Phase 4 complete) |
 | 0.9.0 | 2025-01-25 | Iteration 9 complete - QA automation (Phase 3 complete) |
 | 0.8.0 | 2025-01-25 | Iteration 8 complete - Human-in-the-loop review |

@@ -57,7 +57,7 @@
     {
       "parameters": {
         "baseUrl": "http://host.docker.internal:11434",
-        "model": "llama3.2",
+        "model": "llama3.2:latest",
         "options": {
           "temperature": 0.4
         }
@@ -213,7 +213,7 @@
     },
     {
       "parameters": {
-        "modelId": "claude-sonnet-4-20250514",
+        "model": "claude-sonnet-4-20250514",
         "options": {
           "temperature": 0.2,
           "maxTokensToSample": 4096
@@ -222,11 +222,11 @@
       "id": "claude-sonnet-approval",
       "name": "Claude Sonnet (Approval)",
       "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
-      "typeVersion": 1.2,
+      "typeVersion": 1,
       "position": [2640, 500],
       "credentials": {
         "anthropicApi": {
-          "id": "{{ $credentials.anthropicApiCredentialId }}",
+          "id": "anthropic-credential",
           "name": "Anthropic API"
         }
       }

@@ -1,8 +1,16 @@
 # FOAM Content Creation: N8N Multi-LLM Orchestration Implementation Framework
 
-**Version:** 1.0.0  
-**Last Updated:** 2025-01-21  
-**Author:** REdI (Resuscitation Education Initiative)  
+> **Implementation Note (v1.0.0):** This document served as the original specification and design reference during development. The actual implementation may have evolved from this specification. For the authoritative list of implemented files and features, see:
+> - `CHANGELOG.md` - Version history and implemented features
+> - `TODO.md` - Iteration tracking and completion status
+> - `workflows/` - Actual N8N workflow JSON files
+> - `prompts/` - Actual LLM prompt templates
+>
+> Some file paths referenced in this specification were refactored during implementation. The current file structure is the canonical reference.
+
+**Version:** 1.0.0
+**Last Updated:** 2025-01-21
+**Author:** REdI (Resuscitation Education Initiative)
 **Status:** Planning Phase
 
 ---
