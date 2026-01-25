@@ -184,6 +184,33 @@ CREATE TABLE foam.error_log (
 );
 
 -- =============================================================================
+-- WORKFLOW LOGS (General Purpose)
+-- =============================================================================
+
+CREATE TABLE foam.workflow_logs (
+    log_id VARCHAR(50) PRIMARY KEY,
+    request_id UUID,
+    workflow_name VARCHAR(255),
+    node_name VARCHAR(255),
+    level VARCHAR(20) NOT NULL DEFAULT 'INFO',
+    message TEXT NOT NULL,
+    model_used VARCHAR(100),
+    tokens_used INTEGER,
+    execution_time_ms INTEGER,
+    data JSONB,
+    created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+CREATE INDEX idx_workflow_logs_request
+    ON foam.workflow_logs(request_id);
+
+CREATE INDEX idx_workflow_logs_level
+    ON foam.workflow_logs(level);
+
+CREATE INDEX idx_workflow_logs_created
+    ON foam.workflow_logs(created_at);
+
+-- =============================================================================
 -- AUDIT LOG
 -- =============================================================================
 
