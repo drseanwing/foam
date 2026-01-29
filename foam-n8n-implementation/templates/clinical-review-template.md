@@ -2,10 +2,14 @@
 
 Template for comprehensive topic reviews. Derived from LITFL Critical Care Compendium and EM Cases podcast summary formats.
 
+**Brand:** Follow REdI visual standards. Headers in REdI Navy (`#1B3A5F`). Key takeaways in blockquotes with REdI Teal (`#2B9E9E`) accent. Links in Sky Blue (`#5DADE2`). Warning/caution boxes use Warm Yellow (`#F4D03F`). Typography: Montserrat. See `config/redi-theme.json` for full design tokens.
+
 ## Structure
 
 ```markdown
 # [Topic]: [Subtitle - actionable angle]
+
+*REdI — Resuscitation EDucation Initiative | Metro North Health*
 
 **Written by [Author]; Edited by [Editor]**
 **Expert Peer Review by [Reviewer, Credentials]**
@@ -73,6 +77,10 @@ Template for comprehensive topic reviews. Derived from LITFL Critical Care Compe
 ## FOAMed Resources
 
 - [Cross-references to related content]
+
+---
+*Published by the Resuscitation EDucation Initiative (REdI), Metro North Health, Queensland.*
+*Powered by REdI FOAM Content Creation System.*
 ```
 
 ## Content Standards

@@ -1,16 +1,17 @@
-# FOAM Content Creation System
+# REdI FOAM Content Creation System
 
-**N8N Multi-LLM Orchestration for Medical Education Content**
+**Resuscitation EDucation Initiative — Multi-LLM Orchestration for Medical Education Content**
 
-[![Status](https://img.shields.io/badge/status-development-yellow)]()
-[![Version](https://img.shields.io/badge/version-0.1.0-blue)]()
-[![License](https://img.shields.io/badge/license-internal-lightgrey)]()
+[![Status](https://img.shields.io/badge/status-development-E55B64)]()
+[![Version](https://img.shields.io/badge/version-0.1.0-1B3A5F)]()
+[![REdI](https://img.shields.io/badge/powered%20by-REdI-2B9E9E)]()
+[![License](https://img.shields.io/badge/license-internal-666666)]()
 
 ---
 
 ## Overview
 
-An automated content creation system for FOAM (Free Open Access Medical Education) resources, using N8N to orchestrate multiple LLMs for evidence synthesis, content drafting, and quality assurance.
+An automated content creation system for FOAM (Free Open Access Medical Education) resources, built by the **Resuscitation EDucation Initiative (REdI)** at Metro North Health, Queensland. Uses N8N to orchestrate multiple LLMs for evidence synthesis, content drafting, and quality assurance.
 
 **Core Principle:** AI provides evidence synthesis and structural scaffolding; humans provide clinical wisdom and validation.
 
@@ -207,9 +208,23 @@ Conversation context must persist across:
 
 ## Contact
 
-**Project Lead:** Sean  
-**Team:** Resuscitation Education Initiative (REdI)  
+**Project Lead:** Sean
+**Team:** Resuscitation EDucation Initiative (REdI)
 **Organisation:** Metro North Health, Queensland
+**Email:** redi@health.qld.gov.au
+
+---
+
+## Brand
+
+This project follows the **REdI Brand Guidelines v1.0**. See `config/redi-theme.json` for the digital colour palette and design tokens used across all system components.
+
+| Element | Value |
+|---------|-------|
+| Primary Coral | `#E55B64` |
+| Primary Navy | `#1B3A5F` |
+| Primary Teal | `#2B9E9E` |
+| Typography | Montserrat (primary), Bebas Neue (display) |
 
 ---
 

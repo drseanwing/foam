@@ -1,6 +1,6 @@
-# FOAM Writing Style Guide
+# REdI FOAM Writing Style Guide
 
-Common patterns across high-quality FOAM content for advanced clinical audiences.
+Common patterns across high-quality FOAM content for advanced clinical audiences, published by the **Resuscitation EDucation Initiative (REdI)**, Metro North Health, Queensland.
 
 ## Voice and Tone
 
@@ -118,15 +118,59 @@ Link to existing FOAM resources rather than duplicating:
 - "For detailed ECG interpretation, see LITFL's [Sgarbossa criteria post](URL)"
 - "Previously covered in EM Cases Episode X"
 
+## REdI Visual Identity
+
+All published content must follow the REdI Brand Guidelines. Reference `config/redi-theme.json` for digital design tokens.
+
+### Colour Application
+
+| Element | Colour | Hex |
+|---------|--------|-----|
+| Page headers, section headings | REdI Navy | `#1B3A5F` |
+| Clinical pearl blockquotes (accent border) | REdI Teal | `#2B9E9E` |
+| Hyperlinks | Sky Blue | `#5DADE2` |
+| Warning/caution callouts | Warm Yellow | `#F4D03F` |
+| Critical alert boxes | Alert Red | `#DC3545` |
+| Success/confirmation messages | Success Green | `#28A745` |
+| Primary action buttons/CTAs | REdI Coral | `#E55B64` |
+| Body text | Dark Gray | `#333333` |
+| Page backgrounds | Light Gray / White | `#F5F5F5` / `#FFFFFF` |
+
+### Typography
+
+- **Primary font:** Montserrat (Regular 400, Medium 500, SemiBold 600, Bold 700)
+- **Display font:** Bebas Neue (event titles, promotional headlines only)
+- **Body text:** 1rem (16px) minimum, line-height 1.6
+- **H1:** 2.5rem, Bold 700
+- **H2:** 2rem, SemiBold 600
+- **H3:** 1.5rem, SemiBold 600
+
+### Content Branding
+
+Each published piece must include:
+- REdI attribution line beneath the title: *REdI — Resuscitation EDucation Initiative | Metro North Health*
+- REdI footer: *Published by the Resuscitation EDucation Initiative (REdI), Metro North Health, Queensland.*
+- "Powered by REdI" tagline where appropriate
+
+### Accessibility Requirements
+
+- All text must meet WCAG 2.1 Level AA contrast ratios
+- Normal text: 4.5:1 minimum contrast ratio
+- Large text (18px+): 3:1 minimum contrast ratio
+- Provide focus indicators on interactive elements (3px solid REdI Teal outline)
+- Respect `prefers-reduced-motion` for any animated elements
+- Maximum line length: 75 characters
+
 ## Quality Markers
 
 Content must have:
-â–¡ Named author attribution
-â–¡ Named peer reviewer attribution  
-â–¡ Date and update schedule
-â–¡ All claims cited
-â–¡ Explicit uncertainty statements
-â–¡ "Bottom line" summary
+☐ Named author attribution
+☐ Named peer reviewer attribution
+☐ REdI branding (header attribution and footer)
+☐ Date and update schedule
+☐ All claims cited
+☐ Explicit uncertainty statements
+☐ "Bottom line" summary
 
 ## Common Pitfalls to Avoid
 

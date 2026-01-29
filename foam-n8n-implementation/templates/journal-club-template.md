@@ -2,10 +2,14 @@
 
 Template derived from The Bottom Line format. Structured critical appraisal for trial reviews.
 
+**Brand:** Follow REdI visual standards. Headers in REdI Navy (`#1B3A5F`). Key findings in blockquotes with REdI Teal (`#2B9E9E`) accent. Links in Sky Blue (`#5DADE2`). Typography: Montserrat. See `config/redi-theme.json` for full design tokens.
+
 ## Structure
 
 ```markdown
-# [TRIAL ACRONYM] â€“ [Descriptive Title]
+# [TRIAL ACRONYM] — [Descriptive Title]
+
+*REdI — Resuscitation EDucation Initiative | Metro North Health*
 
 **[Author]. [Journal] [Year]. doi:[DOI]**
 
@@ -117,6 +121,10 @@ In [population], does [intervention] compared with [comparator] [improve/reduce]
 **Summary author:** [Name] @[handle]
 **Summary date:** [Date]
 **Peer-review editor:** [Name]
+
+---
+*Published by the Resuscitation EDucation Initiative (REdI), Metro North Health, Queensland.*
+*Powered by REdI FOAM Content Creation System.*
 ```
 
 ## Critical Appraisal Checklist

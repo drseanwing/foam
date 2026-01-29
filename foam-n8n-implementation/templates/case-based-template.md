@@ -2,10 +2,14 @@
 
 Template derived from EM Cases CritCases format. Progressive case revelation with embedded clinical decision points.
 
+**Brand:** Follow REdI visual standards. Headers in REdI Navy (`#1B3A5F`). Clinical pearls in blockquotes with REdI Teal (`#2B9E9E`) accent. Links in Sky Blue (`#5DADE2`). Typography: Montserrat. See `config/redi-theme.json` for full design tokens.
+
 ## Structure
 
 ```markdown
 # [Title]: [Subtitle describing clinical challenge]
+
+*REdI — Resuscitation EDucation Initiative | Metro North Health*
 
 **Written by [Author Name]; Edited by [Editor Names]**
 **Expert Peer Review by [Reviewer Name, Credentials], [Date]**
@@ -58,6 +62,10 @@ Template derived from EM Cases CritCases format. Progressive case revelation wit
 - [Related LITFL post]
 - [Related EMCrit episode]
 - [Other cross-references]
+
+---
+*Published by the Resuscitation EDucation Initiative (REdI), Metro North Health, Queensland.*
+*Powered by REdI FOAM Content Creation System.*
 ```
 
 ## Key Features
