@@ -164,13 +164,13 @@ Each published piece must include:
 ## Quality Markers
 
 Content must have:
-☐ Named author attribution
-☐ Named peer reviewer attribution
-☐ REdI branding (header attribution and footer)
-☐ Date and update schedule
-☐ All claims cited
-☐ Explicit uncertainty statements
-☐ "Bottom line" summary
+- [ ] Named author attribution
+- [ ] Named peer reviewer attribution
+- [ ] REdI branding (header attribution and footer)
+- [ ] Date and update schedule
+- [ ] All claims cited
+- [ ] Explicit uncertainty statements
+- [ ] "Bottom line" summary
 
 ## Common Pitfalls to Avoid
 
