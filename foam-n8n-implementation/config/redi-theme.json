@@ -16,6 +16,10 @@
       "sky": "#5DADE2",
       "yellow": "#F4D03F"
     },
+    "accessible": {
+      "linkBlue": "#0066CC",
+      "linkBlueDarker": "#0052A3"
+    },
     "neutral": {
       "black": "#000000",
       "darkGray": "#333333",
@@ -88,6 +92,8 @@
     "--redi-lime": "#B8CC26",
     "--redi-sky": "#5DADE2",
     "--redi-yellow": "#F4D03F",
+    "--redi-link-blue": "#0066CC",
+    "--redi-link-blue-darker": "#0052A3",
     "--redi-black": "#000000",
     "--redi-dark-gray": "#333333",
     "--redi-medium-gray": "#666666",
@@ -115,17 +121,31 @@
   },
   "accessibility": {
     "contrastRatios": {
-      "navyOnWhite": "12.5:1 (AAA)",
-      "whiteOnNavy": "12.5:1 (AAA)",
-      "coralOnWhite": "3.8:1 (AA Large)",
-      "whiteOnCoral": "3.8:1 (AA Large)",
+      "navyOnWhite": "11.56:1 (AAA)",
+      "whiteOnNavy": "11.56:1 (AAA)",
+      "linkBlueOnWhite": "5.57:1 (AA)",
+      "coralOnWhite": "3.49:1 (AA Large only)",
+      "whiteOnCoral": "3.49:1 (AA Large only)",
+      "tealOnWhite": "3.24:1 (AA Large only)",
+      "whiteOnTeal": "3.24:1 (AA Large only)",
+      "skyBlueOnWhite": "2.46:1 (FAIL - use linkBlue instead)",
+      "warmYellowOnWhite": "1.51:1 (FAIL - background use only)",
+      "successGreenOnWhite": "3.13:1 (AA Large only)",
+      "alertRedOnWhite": "4.53:1 (AA)",
+      "darkGrayOnWhite": "12.63:1 (AAA)",
       "blackOnLightTeal": "8.2:1 (AAA)",
       "navyOnLightGray": "11.8:1 (AAA)"
     },
-    "whiteOnCoralUsage": "White text on Coral backgrounds is restricted to large or bold UI text (e.g. primary buttons, headings) that meets WCAG 2.1 AA Large criteria. Do not use white on Coral for normal body text.",
+    "colorUsageRules": {
+      "hyperlinks": "Use linkBlue (#0066CC) for all hyperlinks on white/light backgrounds. Sky Blue (#5DADE2) does not meet WCAG 2.1 AA (2.46:1). Alternative: Navy (#1B3A5F) for maximum contrast.",
+      "coralButtons": "White text on Coral (#E55B64) backgrounds is restricted to large or bold UI text (≥18px or ≥14px bold) that meets WCAG 2.1 AA Large criteria. Do not use white on Coral for normal body text.",
+      "warmYellowCallouts": "Warm Yellow (#F4D03F) must only be used as a background color with dark text (Navy #1B3A5F or Dark Gray #333333). Never use yellow text on white backgrounds.",
+      "accentColors": "REdI Teal (#2B9E9E), Sky Blue (#5DADE2), Success Green (#28A745) should be used as accent colors, borders, icons, or large/bold text only—not for normal body text on white backgrounds."
+    },
     "whiteOnCoralMinimumText": {
       "minimumFontSize": "1.125rem",
-      "minimumFontWeight": 600
+      "minimumFontWeight": 600,
+      "alternativeMinimum": "0.875rem at font-weight 700"
     },
     "focusOutline": "3px solid #2B9E9E",
     "focusOutlineOffset": "2px",

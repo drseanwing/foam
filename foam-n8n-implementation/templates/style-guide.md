@@ -124,17 +124,22 @@ All published content must follow the REdI Brand Guidelines. Reference `config/r
 
 ### Colour Application
 
-| Element | Colour | Hex |
-|---------|--------|-----|
-| Page headers, section headings | REdI Navy | `#1B3A5F` |
-| Clinical pearl blockquotes (accent border) | REdI Teal | `#2B9E9E` |
-| Hyperlinks | Sky Blue | `#5DADE2` |
-| Warning/caution callouts | Warm Yellow | `#F4D03F` |
-| Critical alert boxes | Alert Red | `#DC3545` |
-| Success/confirmation messages | Success Green | `#28A745` |
-| Primary action buttons/CTAs | REdI Coral | `#E55B64` |
-| Body text | Dark Gray | `#333333` |
-| Page backgrounds | Light Gray / White | `#F5F5F5` / `#FFFFFF` |
+| Element | Colour | Hex | Usage Notes |
+|---------|--------|-----|-------------|
+| Page headers, section headings | REdI Navy | `#1B3A5F` | ✓ AA compliant on white (11.56:1) |
+| Clinical pearl blockquotes (accent border) | REdI Teal | `#2B9E9E` | Accent/border only; use Navy for text (3.24:1) |
+| Hyperlinks | Accessible Link Blue | `#0066CC` | ✓ AA compliant on white (5.57:1); alternative: Navy |
+| Warning/caution callouts (background) | Warm Yellow | `#F4D03F` | Background only; use Navy/Dark Gray text (1.51:1) |
+| Critical alert boxes (text/icon) | Alert Red | `#DC3545` | ✓ AA compliant on white (4.53:1) |
+| Success messages (large text only) | Success Green | `#28A745` | Large/bold text only on white (3.13:1) |
+| Primary action buttons/CTAs | REdI Coral | `#E55B64` | White text: large/bold only (≥18px or ≥14px bold) |
+| Body text | Dark Gray | `#333333` | ✓ AA compliant on white (12.63:1) |
+| Page backgrounds | Light Gray / White | `#F5F5F5` / `#FFFFFF` | Use with dark text only |
+
+**Accessibility-compliant colour variants:**
+- **Hyperlinks:** Use `#0066CC` (Accessible Link Blue) instead of Sky Blue `#5DADE2` to meet 4.5:1 contrast requirement on white backgrounds
+- **Accents vs. Text:** REdI Teal, Sky Blue, and brand Coral should be used as accent colors, borders, or large/bold text only—not for normal body text
+- **Button text:** White text on Coral buttons requires minimum 18px font size or 14px bold to meet WCAG 2.1 AA Large criteria
 
 ### Typography
 
@@ -154,10 +159,16 @@ Each published piece must include:
 
 ### Accessibility Requirements
 
-- All text must meet WCAG 2.1 Level AA contrast ratios
-- Normal text: 4.5:1 minimum contrast ratio
-- Large text (18px+): 3:1 minimum contrast ratio
-- Provide focus indicators on interactive elements (3px solid REdI Teal outline)
+All published content must meet **WCAG 2.1 Level AA** compliance:
+
+- **Normal text:** 4.5:1 minimum contrast ratio (applies to body text, small headings, labels)
+- **Large text:** 3:1 minimum contrast ratio (≥18px regular or ≥14px bold)
+- **Focus indicators:** 3px solid REdI Teal (`#2B9E9E`) outline on all interactive elements
+- **Color usage constraints:**
+  - Never use Sky Blue `#5DADE2`, Coral `#E55B64`, Teal `#2B9E9E`, or Success Green `#28A745` for normal-sized body text on white/light backgrounds
+  - Warm Yellow `#F4D03F` must only be used as a background color with dark text (Navy or Dark Gray)
+  - When using white text on Coral backgrounds (e.g., buttons), ensure text is ≥18px or ≥14px bold
+- **Keyboard navigation:** All interactive elements must be keyboard-accessible with visible focus states
 - Respect `prefers-reduced-motion` for any animated elements
 - Maximum line length: 75 characters
 
