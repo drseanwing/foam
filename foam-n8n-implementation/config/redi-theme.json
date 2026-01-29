@@ -122,6 +122,11 @@
       "blackOnLightTeal": "8.2:1 (AAA)",
       "navyOnLightGray": "11.8:1 (AAA)"
     },
+    "whiteOnCoralUsage": "White text on Coral backgrounds is restricted to large or bold UI text (e.g. primary buttons, headings) that meets WCAG 2.1 AA Large criteria. Do not use white on Coral for normal body text.",
+    "whiteOnCoralMinimumText": {
+      "minimumFontSize": "1.125rem",
+      "minimumFontWeight": 600
+    },
     "focusOutline": "3px solid #2B9E9E",
     "focusOutlineOffset": "2px",
     "minimumBodyTextSize": "16px",
