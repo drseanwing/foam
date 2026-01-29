@@ -2,10 +2,10 @@
 
 **Resuscitation EDucation Initiative — Multi-LLM Orchestration for Medical Education Content**
 
-[![Status](https://img.shields.io/badge/status-development-E55B64)]()
-[![Version](https://img.shields.io/badge/version-0.1.0-1B3A5F)]()
-[![REdI](https://img.shields.io/badge/powered%20by-REdI-2B9E9E)]()
-[![License](https://img.shields.io/badge/license-internal-666666)]()
+![Status](https://img.shields.io/badge/status-development-E55B64)
+![Version](https://img.shields.io/badge/version-0.1.0-1B3A5F)
+![REdI](https://img.shields.io/badge/powered%20by-REdI-2B9E9E)
+![License](https://img.shields.io/badge/license-internal-666666)
 
 ---
 
