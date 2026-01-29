@@ -6,6 +6,7 @@
   "colors": {
     "primary": {
       "coral": "#E55B64",
+      "coralAccessible": "#C94450",
       "coralDark": "#D14A53",
       "navy": "#1B3A5F",
       "teal": "#2B9E9E"
@@ -15,10 +16,6 @@
       "lime": "#B8CC26",
       "sky": "#5DADE2",
       "yellow": "#F4D03F"
-    },
-    "accessible": {
-      "linkBlue": "#0066CC",
-      "linkBlueDarker": "#0052A3"
     },
     "neutral": {
       "black": "#000000",
@@ -31,7 +28,9 @@
       "error": "#DC3545",
       "warning": "#FFC107",
       "success": "#28A745",
-      "info": "#17A2B8"
+      "info": "#17A2B8",
+      "link": "#0066CC",
+      "linkHover": "#0056B3"
     }
   },
   "typography": {
@@ -85,6 +84,7 @@
   },
   "cssVariables": {
     "--redi-coral": "#E55B64",
+    "--redi-coral-accessible": "#C94450",
     "--redi-coral-dark": "#D14A53",
     "--redi-navy": "#1B3A5F",
     "--redi-teal": "#2B9E9E",
@@ -92,8 +92,6 @@
     "--redi-lime": "#B8CC26",
     "--redi-sky": "#5DADE2",
     "--redi-yellow": "#F4D03F",
-    "--redi-link-blue": "#0066CC",
-    "--redi-link-blue-darker": "#0052A3",
     "--redi-black": "#000000",
     "--redi-dark-gray": "#333333",
     "--redi-medium-gray": "#666666",
@@ -103,6 +101,8 @@
     "--redi-warning": "#FFC107",
     "--redi-success": "#28A745",
     "--redi-info": "#17A2B8",
+    "--redi-link": "#0066CC",
+    "--redi-link-hover": "#0056B3",
     "--font-primary": "'Montserrat', sans-serif",
     "--font-display": "'Bebas Neue', sans-serif",
     "--space-xs": "0.25rem",
@@ -121,31 +121,24 @@
   },
   "accessibility": {
     "contrastRatios": {
-      "navyOnWhite": "11.56:1 (AAA)",
-      "whiteOnNavy": "11.56:1 (AAA)",
-      "linkBlueOnWhite": "5.57:1 (AA)",
-      "coralOnWhite": "3.49:1 (AA Large only)",
-      "whiteOnCoral": "3.49:1 (AA Large only)",
-      "tealOnWhite": "3.24:1 (AA Large only)",
-      "whiteOnTeal": "3.24:1 (AA Large only)",
-      "skyBlueOnWhite": "2.46:1 (FAIL - use linkBlue instead)",
-      "warmYellowOnWhite": "1.51:1 (FAIL - background use only)",
-      "successGreenOnWhite": "3.13:1 (AA Large only)",
-      "alertRedOnWhite": "4.53:1 (AA)",
-      "darkGrayOnWhite": "12.63:1 (AAA)",
-      "blackOnLightTeal": "8.2:1 (AAA)",
-      "navyOnLightGray": "11.8:1 (AAA)"
+      "navyOnWhite": "11.6:1 (AAA)",
+      "whiteOnNavy": "11.6:1 (AAA)",
+      "coralOnWhite": "3.5:1 (AA Large only - white text on #E55B64)",
+      "whiteOnCoralAccessible": "4.7:1 (AA Normal text - white on #C94450)",
+      "whiteOnCoral": "3.5:1 (AA Large only - white text on #E55B64)",
+      "linkBlueOnWhite": "5.6:1 (AA Normal text)",
+      "linkHoverOnWhite": "7.0:1 (AA Normal text - #0056B3)",
+      "darkGrayOnWhite": "12.6:1 (AAA)",
+      "whiteOnAlertRed": "4.5:1 (AA Normal text)",
+      "tealOnWhite": "3.2:1 (Border/accent use only, not for text)",
+      "successGreenWithWhiteText": "3.1:1 (AA Large only - white text on #28A745)"
     },
-    "colorUsageRules": {
-      "hyperlinks": "Use linkBlue (#0066CC) for all hyperlinks on white/light backgrounds. Sky Blue (#5DADE2) does not meet WCAG 2.1 AA (2.46:1). Alternative: Navy (#1B3A5F) for maximum contrast.",
-      "coralButtons": "White text on Coral (#E55B64) backgrounds is restricted to large or bold UI text (≥18px or ≥14px bold) that meets WCAG 2.1 AA Large criteria. Do not use white on Coral for normal body text.",
-      "warmYellowCallouts": "Warm Yellow (#F4D03F) must only be used as a background color with dark text (Navy #1B3A5F or Dark Gray #333333). Never use yellow text on white backgrounds.",
-      "accentColors": "REdI Teal (#2B9E9E), Sky Blue (#5DADE2), Success Green (#28A745) should be used as accent colors, borders, icons, or large/bold text only—not for normal body text on white backgrounds."
-    },
-    "whiteOnCoralMinimumText": {
-      "minimumFontSize": "1.125rem",
-      "minimumFontWeight": 600,
-      "alternativeMinimum": "0.875rem at font-weight 700"
+    "colorUsageGuidelines": {
+      "coral": "Use #C94450 (coralAccessible) for buttons with white text to meet AA normal text standards. Use #E55B64 (coral) for large/bold text only or hover states (requires ≥14px bold).",
+      "links": "Use #0066CC (link blue) for all hyperlinks to meet WCAG AA 4.5:1 contrast on white backgrounds. Hover state #0056B3 provides even higher contrast (7.0:1). Sky blue (#5DADE2) is for decorative purposes only.",
+      "teal": "Use as border/accent color only, not for text content. Pair with dark text (#333333) when used as background.",
+      "yellow": "Use as background color only with dark text (#333333). Do not use for text content.",
+      "successGreen": "Use white text on #28A745 only for large/bold text (≥18px or ≥14px bold). For normal text size buttons/messages, consider using Alert Red (#DC3545) or REdI Navy (#1B3A5F) instead."
     },
     "focusOutline": "3px solid #2B9E9E",
     "focusOutlineOffset": "2px",
@@ -193,8 +186,8 @@
       "backgroundColor": "#17A2B810"
     },
     "buttonPrimary": {
-      "background": "#E55B64",
-      "hoverBackground": "#D14A53",
+      "background": "#C94450",
+      "hoverBackground": "#E55B64",
       "text": "#FFFFFF"
     },
     "buttonSecondary": {

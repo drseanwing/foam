@@ -126,20 +126,19 @@ All published content must follow the REdI Brand Guidelines. Reference `config/r
 
 | Element | Colour | Hex | Usage Notes |
 |---------|--------|-----|-------------|
-| Page headers, section headings | REdI Navy | `#1B3A5F` | ✓ AA compliant on white (11.56:1) |
-| Clinical pearl blockquotes (accent border) | REdI Teal | `#2B9E9E` | Accent/border only; use Navy for text (3.24:1) |
-| Hyperlinks | Accessible Link Blue | `#0066CC` | ✓ AA compliant on white (5.57:1); alternative: Navy |
-| Warning/caution callouts (background) | Warm Yellow | `#F4D03F` | Background only; use Navy/Dark Gray text (1.51:1) |
-| Critical alert boxes (text/icon) | Alert Red | `#DC3545` | ✓ AA compliant on white (4.53:1) |
-| Success messages (large text only) | Success Green | `#28A745` | Large/bold text only on white (3.13:1) |
-| Primary action buttons/CTAs | REdI Coral | `#E55B64` | White text: large/bold only (≥18px or ≥14px bold, 3.49:1) |
-| Body text | Dark Gray | `#333333` | ✓ AA compliant on white (12.63:1) |
-| Page backgrounds | Light Gray / White | `#F5F5F5` / `#FFFFFF` | Use with dark text only |
+| Page headers, section headings | REdI Navy | `#1B3A5F` | Meets WCAG AA for all text sizes |
+| Clinical pearl blockquotes (accent border) | REdI Teal | `#2B9E9E` | Border/accent only; use with dark text |
+| Hyperlinks | Link Blue | `#0066CC` | Meets WCAG AA normal text (5.6:1 contrast) |
+| Hyperlinks (hover/visited) | Sky Blue | `#5DADE2` | Decorative use only; not for text |
+| Warning/caution callouts | Warm Yellow | `#F4D03F` | Background only; use with dark text (#333) |
+| Critical alert boxes | Alert Red | `#DC3545` | With white text; meets WCAG AA (4.5:1) |
+| Success/confirmation messages | Success Green | `#28A745` | White text on green: large/bold text only (3.1:1) |
+| Primary action buttons/CTAs | REdI Coral (Accessible) | `#C94450` | With white text; meets WCAG AA (4.7:1) |
+| Primary action buttons (hover) | REdI Coral | `#E55B64` | With white bold text only (3.5:1) |
+| Body text | Dark Gray | `#333333` | Meets WCAG AA for all text sizes |
+| Page backgrounds | Light Gray / White | `#F5F5F5` / `#FFFFFF` | — |
 
-**Accessibility-compliant colour variants:**
-- **Hyperlinks:** Use `#0066CC` (Accessible Link Blue) instead of Sky Blue `#5DADE2` to meet 4.5:1 contrast requirement on white backgrounds
-- **Accents vs. Text:** REdI Teal, Sky Blue, and brand Coral should be used as accent colors, borders, or large/bold text only—not for normal body text
-- **Button text:** White text on Coral buttons requires minimum 18px font size or 14px bold to meet WCAG 2.1 AA Large criteria
+**Accessibility Note:** All color combinations in the "Usage Notes" column meet WCAG 2.1 Level AA contrast requirements. Colors marked "large/bold text only" require ≥18px regular or ≥14px bold. Colors marked "decorative use only" or "background only" must not be used for text content.
 
 ### Typography
 
@@ -159,29 +158,30 @@ Each published piece must include:
 
 ### Accessibility Requirements
 
-All published content must meet **WCAG 2.1 Level AA** compliance:
-
-- **Normal text:** 4.5:1 minimum contrast ratio (applies to body text, small headings, labels)
-- **Large text:** 3:1 minimum contrast ratio (≥18px regular or ≥14px bold)
-- **Focus indicators:** 3px solid REdI Teal (`#2B9E9E`) outline on all interactive elements
-- **Color usage constraints:**
-  - Never use Sky Blue `#5DADE2`, Coral `#E55B64`, Teal `#2B9E9E`, or Success Green `#28A745` for normal-sized body text on white/light backgrounds
-  - Warm Yellow `#F4D03F` must only be used as a background color with dark text (Navy or Dark Gray)
-  - When using white text on Coral backgrounds (e.g., buttons), ensure text is ≥18px or ≥14px bold
-- **Keyboard navigation:** All interactive elements must be keyboard-accessible with visible focus states
+**WCAG 2.1 Level AA Compliance:**
+- Normal text (< 18px regular or < 14px bold): 4.5:1 minimum contrast ratio
+- Large text (≥ 18px regular or ≥ 14px bold): 3.0:1 minimum contrast ratio
+- All colors in the Colour Application table above meet these requirements when used as specified in the "Usage Notes" column
+- Interactive elements must have 3px solid REdI Teal (#2B9E9E) focus indicators
 - Respect `prefers-reduced-motion` for any animated elements
-- Maximum line length: 75 characters
+- Maximum line length: 75 characters for optimal readability
+
+**Color Contrast Examples:**
+- ✓ Link Blue (#0066CC) on white: 5.6:1 (meets AA normal text requirements)
+- ✓ REdI Navy (#1B3A5F) on white: 11.6:1 (meets AAA for all text)
+- ✓ White text on Alert Red (#DC3545): 4.5:1 (meets AA normal text)
+- ✓ White text on REdI Coral Accessible (#C94450): 4.7:1 (meets AA normal text)
 
 ## Quality Markers
 
 Content must have:
-☐ Named author attribution
-☐ Named peer reviewer attribution
-☐ REdI branding (header attribution and footer)
-☐ Date and update schedule
-☐ All claims cited
-☐ Explicit uncertainty statements
-☐ "Bottom line" summary
+- [ ] Named author attribution
+- [ ] Named peer reviewer attribution
+- [ ] REdI branding (header attribution and footer)
+- [ ] Date and update schedule
+- [ ] All claims cited
+- [ ] Explicit uncertainty statements
+- [ ] "Bottom line" summary
 
 ## Common Pitfalls to Avoid
 
