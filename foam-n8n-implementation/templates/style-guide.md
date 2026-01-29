@@ -132,7 +132,7 @@ All published content must follow the REdI Brand Guidelines. Reference `config/r
 | Warning/caution callouts (background) | Warm Yellow | `#F4D03F` | Background only; use Navy/Dark Gray text (1.51:1) |
 | Critical alert boxes (text/icon) | Alert Red | `#DC3545` | ✓ AA compliant on white (4.53:1) |
 | Success messages (large text only) | Success Green | `#28A745` | Large/bold text only on white (3.13:1) |
-| Primary action buttons/CTAs | REdI Coral | `#E55B64` | White text: large/bold only (≥18px or ≥14px bold) |
+| Primary action buttons/CTAs | REdI Coral | `#E55B64` | White text: large/bold only (≥18px or ≥14px bold, 3.49:1) |
 | Body text | Dark Gray | `#333333` | ✓ AA compliant on white (12.63:1) |
 | Page backgrounds | Light Gray / White | `#F5F5F5` / `#FFFFFF` | Use with dark text only |
 
