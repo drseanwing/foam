@@ -128,17 +128,17 @@ All published content must follow the REdI Brand Guidelines. Reference `config/r
 |---------|--------|-----|-------------|
 | Page headers, section headings | REdI Navy | `#1B3A5F` | Meets WCAG AA for all text sizes |
 | Clinical pearl blockquotes (accent border) | REdI Teal | `#2B9E9E` | Border/accent only; use with dark text |
-| Hyperlinks | Link Blue | `#0066CC` | Meets WCAG AA (5.6:1 contrast) |
+| Hyperlinks | Link Blue | `#0066CC` | Meets WCAG AA normal text (5.6:1 contrast) |
 | Hyperlinks (hover/visited) | Sky Blue | `#5DADE2` | Decorative use only; not for text |
 | Warning/caution callouts | Warm Yellow | `#F4D03F` | Background only; use with dark text (#333) |
 | Critical alert boxes | Alert Red | `#DC3545` | With white text; meets WCAG AA (4.5:1) |
-| Success/confirmation messages | Success Green | `#28A745` | Large/bold text only with white (3.1:1) |
-| Primary action buttons/CTAs | REdI Coral | `#C94450` | With white text; meets WCAG AA (4.7:1) |
-| Primary action buttons (hover) | REdI Coral Light | `#E55B64` | Large/bold text only (3.5:1) |
+| Success/confirmation messages | Success Green | `#28A745` | White text on green: large/bold text only (3.1:1) |
+| Primary action buttons/CTAs | REdI Coral (Accessible) | `#C94450` | With white text; meets WCAG AA (4.7:1) |
+| Primary action buttons (hover) | REdI Coral | `#E55B64` | With white bold text only (3.5:1) |
 | Body text | Dark Gray | `#333333` | Meets WCAG AA for all text sizes |
 | Page backgrounds | Light Gray / White | `#F5F5F5` / `#FFFFFF` | — |
 
-**Accessibility Note:** All color combinations in the "Usage Notes" column meet WCAG 2.1 Level AA contrast requirements. Colors marked "large/bold text only" require 18px+ regular or 14px+ bold. Colors marked "decorative use only" or "background only" must not be used for text content.
+**Accessibility Note:** All color combinations in the "Usage Notes" column meet WCAG 2.1 Level AA contrast requirements. Colors marked "large/bold text only" require ≥18px regular or ≥14px bold. Colors marked "decorative use only" or "background only" must not be used for text content.
 
 ### Typography
 
@@ -167,10 +167,10 @@ Each published piece must include:
 - Maximum line length: 75 characters for optimal readability
 
 **Color Contrast Examples:**
-- ✓ Link Blue (#0066CC) on white: 5.6:1 (meets AA for normal text)
+- ✓ Link Blue (#0066CC) on white: 5.6:1 (meets AA normal text requirements)
 - ✓ REdI Navy (#1B3A5F) on white: 11.6:1 (meets AAA for all text)
-- ✓ White text on Alert Red (#DC3545): 4.5:1 (meets AA for normal text)
-- ✓ White text on REdI Coral (#C94450): 4.7:1 (meets AA for normal text)
+- ✓ White text on Alert Red (#DC3545): 4.5:1 (meets AA normal text)
+- ✓ White text on REdI Coral Accessible (#C94450): 4.7:1 (meets AA normal text)
 
 ## Quality Markers
 
