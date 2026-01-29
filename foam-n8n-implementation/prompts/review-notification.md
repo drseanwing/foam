@@ -1,7 +1,36 @@
 # Review Request Notification Generator
 
 ## Purpose
-Generate professional, actionable review request notifications for expert clinical reviewers. This prompt creates targeted communications (email, Slack, system notifications) that clearly outline what needs to be reviewed, why expert input is critical, and how to complete the review efficiently.
+Generate professional, actionable review request notifications for expert clinical reviewers on behalf of the **Resuscitation EDucation Initiative (REdI)**, Metro North Health. This prompt creates targeted communications (email, Slack, system notifications) that clearly outline what needs to be reviewed, why expert input is critical, and how to complete the review efficiently.
+
+## Brand Styling
+
+All notifications must follow REdI brand guidelines. Reference `config/redi-theme.json` for design tokens.
+
+### Colour Palette for Notifications
+- **Primary action buttons:** REdI Coral `#E55B64` (hover: `#D14A53`), REdI Navy `#1B3A5F` text (to meet WCAG 2.1 AA on light backgrounds)
+- **Secondary buttons:** REdI Navy `#1B3A5F`, white text
+- **Outline buttons:** REdI Coral border and text on white
+- **HIGH urgency badge:** Alert Red `#DC3545`
+- **MEDIUM urgency badge:** Warning Amber `#FFC107`
+- **LOW urgency badge:** Info Blue `#17A2B8`
+- **Links:** REdI Navy `#1B3A5F` on light backgrounds (Sky Blue `#5DADE2` may be used for hover/underline accents where contrast remains acceptable)
+- **Headers:** REdI Navy `#1B3A5F`
+- **Body text:** Dark Gray `#333333`
+- **Backgrounds:** Light Gray `#F5F5F5` or White `#FFFFFF`
+
+### Typography for HTML Emails
+- **Font family:** Montserrat, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif
+- **H1:** 2rem, weight 700, REdI Navy
+- **H2:** 1.5rem, weight 600, REdI Navy
+- **Body:** 1rem, weight 400, line-height 1.6, Dark Gray
+- **Button text:** weight 600
+
+### Email Header Template
+Include the REdI wordmark and a gradient accent bar (Lime `#B8CC26` to Teal `#2B9E9E` to Navy `#1B3A5F`) at the top of HTML emails.
+
+### Email Footer Template
+Include: "Resuscitation EDucation Initiative (REdI) | Metro North Health | Queensland Government" with REdI Teal `#2B9E9E` divider line.
 
 ## Input Requirements
 
@@ -382,6 +411,11 @@ Best regards,
 [Content Creator Name]
 [Title/Credentials]
 [Contact Information]
+
+---
+*Resuscitation EDucation Initiative (REdI)*
+*Workforce Development & Education Unit*
+*Metro North Health | Queensland Government*
 ```
 
 ## Slack Message Structure
@@ -417,15 +451,16 @@ Thanks for making FOAM better! :raised_hands:
 
 ## Web Dashboard Card Structure
 
-Compact, scannable format for review dashboards:
+Compact, scannable format for review dashboards. Uses REdI brand styling: Navy headers, Coral primary buttons, Teal accents, Light Gray card background with 8px border radius.
 
 ```
 ┌─────────────────────────────────────────────┐
-│ [!] HIGH PRIORITY                           │
+│ ▌REdI                                       │  ← REdI Teal (#2B9E9E) left border
+│ [!] HIGH PRIORITY                           │  ← Alert Red (#DC3545) badge
 │                                             │
-│ Review Request: Sepsis Management in ED    │
+│ Review Request: Sepsis Management in ED    │  ← Navy (#1B3A5F) heading
 │                                             │
-│ Est. Time: 45 min | Due: Jan 28 (3 days)  │
+│ Est. Time: 45 min | Due: Jan 28 (3 days)  │  ← Dark Gray (#333333) text
 │                                             │
 │ Items to Verify: 45                        │
 │ └─ HIGH priority doses: 8                  │
@@ -434,7 +469,7 @@ Compact, scannable format for review dashboards:
 │                                             │
 │ Specialty: Emergency Medicine              │
 │                                             │
-│ [Start Review]  [View Draft]  [Decline]    │
+│ [Start Review]  [View Draft]  [Decline]    │  ← Coral/Navy/Outline buttons
 └─────────────────────────────────────────────┘
 ```
 

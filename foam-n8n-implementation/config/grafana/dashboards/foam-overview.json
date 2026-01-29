@@ -9,13 +9,13 @@
         },
         "enable": true,
         "hide": true,
-        "iconColor": "rgba(0, 211, 255, 1)",
+        "iconColor": "#2B9E9E",
         "name": "Annotations & Alerts",
         "type": "dashboard"
       }
     ]
   },
-  "description": "FOAM N8N Multi-LLM Orchestration System Overview Dashboard",
+  "description": "REdI FOAM Content Creation System — Multi-LLM Orchestration Monitoring Dashboard",
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 1,
@@ -37,12 +37,12 @@
             {
               "options": {
                 "0": {
-                  "color": "red",
+                  "color": "#DC3545",
                   "index": 1,
                   "text": "DOWN"
                 },
                 "1": {
-                  "color": "green",
+                  "color": "#2B9E9E",
                   "index": 0,
                   "text": "UP"
                 }
@@ -54,15 +54,15 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "#2B9E9E",
                 "value": null
               },
               {
-                "color": "red",
+                "color": "#DC3545",
                 "value": 0
               },
               {
-                "color": "green",
+                "color": "#2B9E9E",
                 "value": 1
               }
             ]
@@ -116,12 +116,12 @@
             {
               "options": {
                 "0": {
-                  "color": "red",
+                  "color": "#DC3545",
                   "index": 1,
                   "text": "DOWN"
                 },
                 "1": {
-                  "color": "green",
+                  "color": "#2B9E9E",
                   "index": 0,
                   "text": "UP"
                 }
@@ -133,15 +133,15 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "#2B9E9E",
                 "value": null
               },
               {
-                "color": "red",
+                "color": "#DC3545",
                 "value": 0
               },
               {
-                "color": "green",
+                "color": "#2B9E9E",
                 "value": 1
               }
             ]
@@ -194,12 +194,12 @@
             {
               "options": {
                 "0": {
-                  "color": "red",
+                  "color": "#DC3545",
                   "index": 1,
                   "text": "DOWN"
                 },
                 "1": {
-                  "color": "green",
+                  "color": "#2B9E9E",
                   "index": 0,
                   "text": "UP"
                 }
@@ -211,15 +211,15 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "#2B9E9E",
                 "value": null
               },
               {
-                "color": "red",
+                "color": "#DC3545",
                 "value": 0
               },
               {
-                "color": "green",
+                "color": "#2B9E9E",
                 "value": 1
               }
             ]
@@ -283,7 +283,7 @@
               "legend": false
             },
             "lineInterpolation": "linear",
-            "lineWidth": 1,
+            "lineWidth": 2,
             "pointSize": 5,
             "scaleDistribution": {
               "type": "linear"
@@ -303,7 +303,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "#2B9E9E",
                 "value": null
               }
             ]
@@ -350,7 +350,8 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "palette-classic"
+            "mode": "fixed",
+            "fixedColor": "#E55B64"
           },
           "custom": {
             "axisCenteredZero": false,
@@ -367,7 +368,7 @@
               "legend": false
             },
             "lineInterpolation": "linear",
-            "lineWidth": 1,
+            "lineWidth": 2,
             "pointSize": 5,
             "scaleDistribution": {
               "type": "linear"
@@ -387,7 +388,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "#2B9E9E",
                 "value": null
               }
             ]
@@ -441,15 +442,15 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "#28A745",
                 "value": null
               },
               {
-                "color": "yellow",
+                "color": "#FFC107",
                 "value": 50
               },
               {
-                "color": "red",
+                "color": "#DC3545",
                 "value": 100
               }
             ]
@@ -502,7 +503,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "#2B9E9E",
                 "value": null
               }
             ]
@@ -557,15 +558,15 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "#28A745",
                 "value": null
               },
               {
-                "color": "yellow",
+                "color": "#FFC107",
                 "value": 10
               },
               {
-                "color": "red",
+                "color": "#DC3545",
                 "value": 50
               }
             ]
@@ -624,7 +625,83 @@
           },
           "mappings": []
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "completed"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#2B9E9E",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "in_progress"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#5DADE2",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "pending"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#F4D03F",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "failed"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#E55B64",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "review"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#1B3A5F",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
         "h": 6,
@@ -692,7 +769,7 @@
               "legend": false
             },
             "lineInterpolation": "linear",
-            "lineWidth": 1,
+            "lineWidth": 2,
             "pointSize": 5,
             "scaleDistribution": {
               "type": "linear"
@@ -712,14 +789,60 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "#2B9E9E",
                 "value": null
               }
             ]
           },
           "unit": "bytes"
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "n8n"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#E55B64",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "postgres"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#1B3A5F",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ollama"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#2B9E9E",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
         "h": 8,
@@ -776,7 +899,7 @@
               "legend": false
             },
             "lineInterpolation": "linear",
-            "lineWidth": 1,
+            "lineWidth": 2,
             "pointSize": 5,
             "scaleDistribution": {
               "type": "linear"
@@ -798,14 +921,60 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "#2B9E9E",
                 "value": null
               }
             ]
           },
           "unit": "percentunit"
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "n8n"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#E55B64",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "postgres"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#1B3A5F",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "ollama"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#2B9E9E",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
         "h": 8,
@@ -854,15 +1023,15 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "#28A745",
                 "value": null
               },
               {
-                "color": "yellow",
+                "color": "#FFC107",
                 "value": 70
               },
               {
-                "color": "red",
+                "color": "#DC3545",
                 "value": 85
               }
             ]
@@ -917,15 +1086,15 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "#28A745",
                 "value": null
               },
               {
-                "color": "yellow",
+                "color": "#FFC107",
                 "value": 70
               },
               {
-                "color": "red",
+                "color": "#DC3545",
                 "value": 85
               }
             ]
@@ -980,15 +1149,15 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "red",
+                "color": "#DC3545",
                 "value": null
               },
               {
-                "color": "yellow",
+                "color": "#FFC107",
                 "value": 10
               },
               {
-                "color": "green",
+                "color": "#28A745",
                 "value": 20
               }
             ]
@@ -1041,7 +1210,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "#2B9E9E",
                 "value": null
               }
             ]
@@ -1089,7 +1258,8 @@
       "fieldConfig": {
         "defaults": {
           "color": {
-            "mode": "palette-classic"
+            "mode": "fixed",
+            "fixedColor": "#5DADE2"
           },
           "custom": {
             "axisCenteredZero": false,
@@ -1106,7 +1276,7 @@
               "legend": false
             },
             "lineInterpolation": "linear",
-            "lineWidth": 1,
+            "lineWidth": 2,
             "pointSize": 5,
             "scaleDistribution": {
               "type": "linear"
@@ -1126,7 +1296,7 @@
             "mode": "absolute",
             "steps": [
               {
-                "color": "green",
+                "color": "#2B9E9E",
                 "value": null
               }
             ]
@@ -1170,6 +1340,7 @@
   "schemaVersion": 38,
   "style": "dark",
   "tags": [
+    "redi",
     "foam",
     "n8n",
     "llm",
@@ -1184,7 +1355,7 @@
   },
   "timepicker": {},
   "timezone": "browser",
-  "title": "FOAM N8N System Overview",
+  "title": "REdI FOAM System Overview",
   "uid": "foam-n8n-overview",
   "version": 1,
   "weekStart": ""
