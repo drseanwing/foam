@@ -8,13 +8,13 @@ Generate professional, actionable review request notifications for expert clinic
 All notifications must follow REdI brand guidelines. Reference `config/redi-theme.json` for design tokens.
 
 ### Colour Palette for Notifications
-- **Primary action buttons:** REdI Coral `#E55B64` (hover: `#D14A53`), white text
+- **Primary action buttons:** REdI Coral `#E55B64` (hover: `#D14A53`), REdI Navy `#1B3A5F` text (to meet WCAG 2.1 AA on light backgrounds)
 - **Secondary buttons:** REdI Navy `#1B3A5F`, white text
 - **Outline buttons:** REdI Coral border and text on white
 - **HIGH urgency badge:** Alert Red `#DC3545`
 - **MEDIUM urgency badge:** Warning Amber `#FFC107`
 - **LOW urgency badge:** Info Blue `#17A2B8`
-- **Links:** Sky Blue `#5DADE2`
+- **Links:** REdI Navy `#1B3A5F` on light backgrounds (Sky Blue `#5DADE2` may be used for hover/underline accents where contrast remains acceptable)
 - **Headers:** REdI Navy `#1B3A5F`
 - **Body text:** Dark Gray `#333333`
 - **Backgrounds:** Light Gray `#F5F5F5` or White `#FFFFFF`
